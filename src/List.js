@@ -1,7 +1,7 @@
 import React from 'react';
 import ListItem from './ListItem';
 
-const List = ({items}) => {
+const List = ({items, handleDelete}) => {
 
     const listItems = () => {
         return items.map(item => (
@@ -10,6 +10,7 @@ const List = ({items}) => {
                 priority={item.priority}
                 key={item.id}
                 id={item.id}
+                deleteCallback={handleDelete}
             />
         ))
 
